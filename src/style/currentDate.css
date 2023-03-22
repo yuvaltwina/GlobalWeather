@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap");
+.date-container {
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  background-image: url("../utils/images/5056.png");
+  border: solid 1px black;
+  border-radius: 100%;
+  background-size: cover;
+  width: 150px;
+  aspect-ratio: 1/1;
+}
+
+.date-container::before {
+  position: absolute;
+  content: "";
+  background-color: rgb(4, 4, 4);
+  border-radius: 50%;
+  width: 7px;
+  aspect-ratio: 1/1;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  color: rgba(0, 0, 0, 0.65);
+  width: 70%;
+  padding: 0.5rem 0.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular";
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.time span:first-child {
+  margin-right: 0.2rem;
+}
+.time_zone {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: black;
+  padding-right: 0.3rem;
+  margin-right: 0.5rem;
+  font-weight: bolder;
+}
+.header_date {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bolder;
+  font-size: 0.8rem;
+  position: relative;
+  bottom: -6rem;
+  margin-left: 2rem;
+  color: rgba(255, 255, 255, 0.597);
+  font-size: 1rem;
+  font-weight: bolder;
+  width: 12rem;
+}
+
+.time_container {
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.minute_dial {
+  position: absolute;
+  background-color: rgba(4, 4, 4, 0.809);
+  transform-origin: bottom;
+  width: 3px;
+  height: 28%;
+  bottom: 50%;
+  z-index: 9;
+  transform: rotate(var(--minute-dial-rotaition-deg));
+}
+
+.hour_dial {
+  position: absolute;
+  background-color: rgba(4, 4, 4, 0.809);
+  transform-origin: bottom;
+  width: 3px;
+  height: 18%;
+  bottom: 50%;
+  z-index: 9;
+  left: 50%;
+  transform: rotate(var(--hour-dial-rotaition-deg));
+}
+
+.dark_date_container {
+  border-color: rgb(0, 0, 0);
+}
+.dark_dial {
+  background-color: rgba(11, 11, 11, 0.7);
+}
+
+.selected_time {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bolder;
+}
+@media (max-width: 1050px) {
+  .date-container {
+    position: relative;
+    top: auto;
+    left: auto;
+  }
+}

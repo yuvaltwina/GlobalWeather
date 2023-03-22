@@ -1,0 +1,82 @@
+.weather_card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  padding: 1.5rem;
+  border-radius: 4%;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  background-color: rgba(90, 88, 88, 0.49);
+  font-size: 1.3rem;
+  font-weight: bolder;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.weather_card:hover {
+  cursor: pointer;
+}
+.date {
+  padding: 3px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.temp {
+  padding: 3px;
+  margin: 0.5rem;
+  font-size: 3rem;
+}
+.single_weather_icon {
+  margin-bottom: 4px;
+  width: 100px;
+  padding: 10px;
+}
+.dark_weather_card {
+  background-color: rgba(89, 84, 84, 0.49);
+}
+.chosen_weather_in_list {
+  /* background-color: rgba(221, 221, 221, 0.522); */
+  background-color: rgba(139, 138, 138, 0.576);
+}
+.chosen_weather_in_list:hover {
+  cursor: auto;
+}
+
+@media (max-width: 1700px) {
+  .date {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 520px) {
+  .weather_card {
+    padding: 1rem;
+  }
+  .date {
+    margin-bottom: 0.2rem;
+    font-size: 1.2rem;
+  }
+  .temp {
+    font-size: 1.7rem;
+    margin: 0;
+  }
+  .single_weather_icon {
+    margin-bottom: 0;
+    width: 90px;
+    padding: 5px;
+  }
+}
+@media (max-width: 370px) {
+  .weather_card {
+    padding: 0.5rem;
+  }
+  .date {
+    font-size: 1rem;
+  }
+  .temp {
+    font-size: 1.5rem;
+  }
+  .single_weather_icon {
+    width: 70px;
+  }
+}

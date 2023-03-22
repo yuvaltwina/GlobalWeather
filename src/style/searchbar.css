@@ -1,0 +1,15 @@
+.form-field {
+  height: 1.8rem;
+  width: 35rem;
+  margin: 2rem;
+}
+@media (max-width: 650px) {
+  .form-field {
+    width: 80%;
+  }
+}
+@media (max-width: 450px) {
+  .form-field {
+    width: 100%;
+  }
+}
