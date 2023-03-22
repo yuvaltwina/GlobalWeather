@@ -21,7 +21,6 @@ const AppProvider = ({ children }) => {
       setLoading(true);
       try {
         const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${process.env.REACT_APP_KEY}`;
-        console.log(process.env.REACT_APP_KEY);
         const geoResponse = await axios.get(geoUrl);
         const geoData = geoResponse.data;
         if (!geoData[0]) {
