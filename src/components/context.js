@@ -14,13 +14,14 @@ const AppProvider = ({ children }) => {
     isError: false,
     errorMessage: "City not found",
   });
-  // לקבל הסבר על דיפנדנסיס
+
   const fetchDataWithSearch = useCallback(async () => {
     if (city) {
       setError((prevState) => ({ ...prevState, isError: false }));
       setLoading(true);
       try {
         const geoUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${process.env.REACT_APP_KEY}`;
+        console.log(process.env.REACT_APP_KEY);
         const geoResponse = await axios.get(geoUrl);
         const geoData = geoResponse.data;
         if (!geoData[0]) {
